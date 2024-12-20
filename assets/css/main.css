@@ -1466,3 +1466,63 @@ line-height: 24px;
 font-size: 14px;
 margin-bottom: 0;
 }
+
+/*--------------------------------------------------------------
+# Projects Section
+--------------------------------------------------------------*/
+.projects .project-container {
+  overflow-x: auto; /* Changed to auto for mobile */
+}
+
+.projects .project-wrapper {
+  display: flex;
+  width: fit-content;
+  transition: transform 0.3s linear;
+}
+
+.projects .project-item {
+  background-color: var(--surface-color);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  margin: 10px;
+  border-radius: 5px;
+  min-width: 300px; /* Keep min-width for larger screens */
+  transition: all 0.3s ease;
+}
+
+.projects .project-item:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.projects .project-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.projects .project-item h3 a {
+  color: var(--heading-color);
+  transition: color 0.3s;
+}
+
+.projects .project-item h3 a:hover {
+  color: var(--accent-color);
+}
+
+.projects .project-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* Adjust for mobile screens */
+@media (max-width: 768px) {
+  .projects .project-wrapper {
+     flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+     justify-content: flex-start;
+  }
+  .projects .project-item {
+    min-width: calc(100% - 20px);  /* Let cards take up full width in mobile view */
+    margin: 10px 0; /* Keep vertical margins */
+  }
+}
